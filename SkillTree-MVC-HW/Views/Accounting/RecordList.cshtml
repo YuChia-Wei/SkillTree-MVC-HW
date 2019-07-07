@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SkillTree_MVC_HW.Models.ViewModel.PersonalAccountingViewModel>
+
+@{
+    Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Account)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        int recordCount = 1;
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(recordCount++)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Account)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
+        }
+    }
+</table>
