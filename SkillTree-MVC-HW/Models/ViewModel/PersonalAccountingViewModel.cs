@@ -16,7 +16,7 @@ namespace SkillTree_MVC_HW.Models.ViewModel
 
         public string Account { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Date { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N0}")]
