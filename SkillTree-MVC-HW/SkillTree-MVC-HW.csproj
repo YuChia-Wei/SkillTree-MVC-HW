@@ -130,6 +130,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\PersonalAccounting\PersonalAccountingAreaRegistration.cs" />
     <Compile Include="Areas\PersonalAccounting\Controllers\HomeController.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IUnitOfWork.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\SkillTreeHomeWorkUnitOfWork.cs" />
+    <Compile Include="Service\AccountBookLogService.cs" />
+    <Compile Include="Service\AccountBookService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,8 +225,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\PersonalAccounting\Models\" />
-    <Folder Include="Areas\PersonalAccounting\Repository\" />
-    <Folder Include="Areas\PersonalAccounting\Service\" />
     <Folder Include="Areas\PersonalAccounting\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
