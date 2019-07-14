@@ -14,9 +14,6 @@
             @Html.DisplayNameFor(model => model.Category)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Account)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
@@ -29,23 +26,20 @@
         int recordCount = 1;
         foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @(recordCount++)
-            </td>
-            <td>
-                @Html.DisplayName(item.Category.ToString())
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Account)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Amount)
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @(recordCount++)
+                </td>
+                <td>
+                    @Html.DisplayName(item.Category.ToString())
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+            </tr>
         }
     }
 </table>

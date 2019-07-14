@@ -50,9 +50,10 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
             {
                 _accountBookService.Add(accountingViewModel);
                 _unitOfWork.Commit();
+                ModelState.Clear();
             }
 
-            return View(accountingViewModel);
+            return View();
         }
     }
 }
