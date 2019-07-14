@@ -23,7 +23,7 @@ namespace SkillTree_MVC_HW.Service
             {
                 Category = (PersonalAccountingViewModel.RecordCategory)v.Categoryyy,
                 Date = v.Dateee,
-                Account = v.Remarkkk,
+                //Account = v.Remarkkk,
                 Amount = v.Amounttt
             });
             return result;
@@ -36,7 +36,7 @@ namespace SkillTree_MVC_HW.Service
             {
                 Category = (PersonalAccountingViewModel.RecordCategory)source.Categoryyy,
                 Date = source.Dateee,
-                Account = source.Remarkkk,
+                //Account = source.Remarkkk,
                 Amount = source.Amounttt
             };
         }
@@ -49,7 +49,7 @@ namespace SkillTree_MVC_HW.Service
                 Amounttt = (int)order.Amount,
                 Categoryyy = (int)order.Category,
                 Dateee = order.Date,
-                Remarkkk = order.Account
+                //Remarkkk = order.Account
             });
         }
 
@@ -61,7 +61,7 @@ namespace SkillTree_MVC_HW.Service
                 oldData.Amounttt = (int)pageData.Amount;
                 oldData.Categoryyy = (int)pageData.Category;
                 oldData.Dateee = pageData.Date;
-                oldData.Remarkkk = pageData.Account;
+                //oldData.Remarkkk = pageData.Account;
             }
         }
 

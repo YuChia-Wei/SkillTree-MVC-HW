@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\PersonalAccounting\Controllers\HomeController.RandomData.cs" />
     <Compile Include="Areas\PersonalAccounting\PersonalAccountingAreaRegistration.cs" />
     <Compile Include="Areas\PersonalAccounting\Controllers\HomeController.cs" />
     <Compile Include="Repository\IRepository.cs" />
