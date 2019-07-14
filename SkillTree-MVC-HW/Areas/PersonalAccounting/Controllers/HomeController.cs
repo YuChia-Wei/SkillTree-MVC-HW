@@ -10,8 +10,13 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
     public class HomeController : Controller
     {
         private readonly AccountBookService _accountBookService;
-        private readonly AccountBookLogService _accountBookLogService;
         private readonly SkillTreeHomeWorkUnitOfWork _unitOfWork;
+
+        public HomeController()
+        {
+            _unitOfWork = new SkillTreeHomeWorkUnitOfWork();
+            _accountBookService = new AccountBookService(_unitOfWork);
+        }
 
         // GET: Accounting
         public ActionResult Index()

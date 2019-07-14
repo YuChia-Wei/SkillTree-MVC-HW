@@ -134,7 +134,6 @@
     <Compile Include="Repository\IUnitOfWork.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\SkillTreeHomeWorkUnitOfWork.cs" />
-    <Compile Include="Service\AccountBookLogService.cs" />
     <Compile Include="Service\AccountBookService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
