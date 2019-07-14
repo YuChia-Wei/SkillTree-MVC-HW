@@ -49,7 +49,7 @@ namespace SkillTree_MVC_HW.Service
                 Amounttt = (int)order.Amount,
                 Categoryyy = (int)order.Category,
                 Dateee = order.Date,
-                //Remarkkk = order.Account
+                Remarkkk = order.Account??string.Empty
             });
         }
 

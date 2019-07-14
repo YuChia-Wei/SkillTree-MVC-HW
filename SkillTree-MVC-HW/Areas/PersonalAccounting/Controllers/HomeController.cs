@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using SkillTree_MVC_HW.Models.ViewModel;
@@ -28,12 +29,7 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
         [ChildActionOnly]
         public ActionResult RecordList()
         {
-            //List<PersonalAccountingViewModel> showData =
-            //    new List<PersonalAccountingViewModel>();
-
-            //GetPersonalAccountingViewModels(showData);
-
-            return View(_accountBookService.Lookup());
+            return View(_accountBookService.Lookup().OrderBy( a => a.Date));
         }
 
         [ChildActionOnly]
@@ -53,7 +49,6 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
             if (ModelState.IsValid)
             {
                 _accountBookService.Add(accountingViewModel);
-
                 _unitOfWork.Commit();
             }
 
