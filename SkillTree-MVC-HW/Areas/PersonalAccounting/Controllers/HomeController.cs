@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Web.Mvc;
 using SkillTree_MVC_HW.Models.ViewModel;
 using SkillTree_MVC_HW.Repository;
@@ -25,12 +26,6 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
         }
 
         [ChildActionOnly]
-        public ActionResult Input()
-        {
-            return View();
-        }
-
-        [ChildActionOnly]
         public ActionResult RecordList()
         {
             //List<PersonalAccountingViewModel> showData =
@@ -39,6 +34,30 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
             //GetPersonalAccountingViewModels(showData);
 
             return View(_accountBookService.Lookup());
+        }
+
+        [ChildActionOnly]
+        public ActionResult Input()
+        {
+            return View();
+        }
+
+        // POST: WithServiceAndLogInUnitOfWork/Orders/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Input([Bind(Include = "Category,Date,Amount")]
+            PersonalAccountingViewModel accountingViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                _accountBookService.Add(accountingViewModel);
+
+                _unitOfWork.Commit();
+            }
+
+            return View(accountingViewModel);
         }
     }
 }
