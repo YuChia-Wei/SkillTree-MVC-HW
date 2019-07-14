@@ -1,4 +1,4 @@
-﻿namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Service
+﻿namespace SkillTree_MVC_HW.Service
 {
     public class AccountBookService
     {

@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using SkillTree_MVC_HW.Models.ViewModel;
+using SkillTree_MVC_HW.Repository;
+using SkillTree_MVC_HW.Service;
 
 namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly AccountBookService _accountBookService;
+        private readonly AccountBookLogService _accountBookLogService;
+        private readonly SkillTreeHomeWorkUnitOfWork _unitOfWork;
+
         // GET: Accounting
         public ActionResult Index()
         {
