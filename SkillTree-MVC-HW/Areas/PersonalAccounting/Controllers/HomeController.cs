@@ -1,11 +1,11 @@
-﻿using SkillTree_MVC_HW.Models.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using SkillTree_MVC_HW.Models.ViewModel;
 
-namespace SkillTree_MVC_HW.Controllers
+namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
 {
-    public class AccountingController : Controller
+    public class HomeController : Controller
     {
         // GET: Accounting
         public ActionResult Index()
