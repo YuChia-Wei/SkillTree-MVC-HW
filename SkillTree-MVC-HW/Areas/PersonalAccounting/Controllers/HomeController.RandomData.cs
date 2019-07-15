@@ -1,34 +1,11 @@
-﻿using SkillTree_MVC_HW.Models.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Web.Mvc;
+using SkillTree_MVC_HW.Models.ViewModel;
 
-namespace SkillTree_MVC_HW.Controllers
+namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
 {
-    public class AccountingController : Controller
+    public partial class HomeController
     {
-        // GET: Accounting
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        [ChildActionOnly]
-        public ActionResult Input()
-        {
-            return View();
-        }
-
-        [ChildActionOnly]
-        public ActionResult RecordList()
-        {
-            List<PersonalAccountingViewModel> showData =
-                new List<PersonalAccountingViewModel>();
-
-            GetPersonalAccountingViewModels(showData);
-
-            return View(showData);
-        }
 
         private List<PersonalAccountingViewModel> GetPersonalAccountingViewModels()
         {
