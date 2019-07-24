@@ -35,7 +35,7 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
 
             return new PersonalAccountingViewModel()
             {
-                Account = accountNameStrings[random.Next(0, 3)],
+                Remark = accountNameStrings[random.Next(0, 3)],
                 Amount = (decimal)random.Next(0, 1000000),
                 Category = (PersonalAccountingViewModel.RecordCategory)random.Next(1, 3),
                 Date = DateTime.Now.AddDays(random.Next(0, 10))

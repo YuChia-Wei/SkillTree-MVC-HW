@@ -43,7 +43,7 @@ namespace SkillTree_MVC_HW.Areas.PersonalAccounting.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Input([Bind(Include = "Category,Date,Amount")]
+        public ActionResult Input([Bind(Include = "Category,Date,Amount,Remark")]
             PersonalAccountingViewModel accountingViewModel)
         {
             if (ModelState.IsValid)
