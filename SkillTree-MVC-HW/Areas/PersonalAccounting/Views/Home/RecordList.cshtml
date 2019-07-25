@@ -3,6 +3,9 @@
 
 @{
     Layout = null;
+    var textStyle = new Dictionary<PersonalAccountingViewModel.RecordCategory, string> {
+        { PersonalAccountingViewModel.RecordCategory.Income, "blue"},
+        { PersonalAccountingViewModel.RecordCategory.Expenditure, "red"}};
 }
 
 <table class="table">
@@ -26,7 +29,7 @@
         int recordCount = 1;
         foreach (var item in Model)
         {
-            <tr>
+            <tr style="color: @textStyle[item.Category]">
                 <td>
                     @(recordCount++)
                 </td>
