@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using SkillTree_MVC_HW.YAttribute;
 
 namespace SkillTree_MVC_HW.Models.ViewModel
 {
@@ -22,6 +23,7 @@ namespace SkillTree_MVC_HW.Models.ViewModel
 
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [Required]
+        [DateCompareToday(DateCompareMethod.LessThen)]
         public DateTime Date { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:N0}")]
