@@ -21,7 +21,7 @@ namespace SkillTree_MVC_HW.Models.ViewModel
         [Obsolete("未使用", true)]
         public string Account { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [Required]
         [DateCompareToday(DateCompareMethod.LessThen)]
         public DateTime Date { get; set; }

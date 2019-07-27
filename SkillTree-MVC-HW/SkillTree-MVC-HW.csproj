@@ -223,6 +223,7 @@
     <Content Include="Areas\PersonalAccounting\Views\Home\Index.cshtml" />
     <Content Include="Areas\PersonalAccounting\Views\Home\Input.cshtml" />
     <Content Include="Areas\PersonalAccounting\Views\Home\RecordList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\PersonalAccounting\Models\" />
